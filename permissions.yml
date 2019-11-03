@@ -1,0 +1,143 @@
+groups:
+  Guest:
+    build: false
+    permissions:
+    - watch.use
+    - clickwarp.teleport.instant
+    - clickwarp.warp.instant
+    - clickwarp.sign.use
+    - clickwarp.warp
+    - clickwarp.invwarp.item
+    - chatex.allowchat
+    - modifyworld.chat
+    - easywarp.command.warp
+    - easywarp.sign.use
+    - essentials.signs.use.warp
+    - signwarp.signs.use.warp
+    - essentials.warp.*
+    - essentials.warp
+    - easywarp.warp.<warpname>
+    - null
+    - balance
+    - balance.others
+    - balancetop
+    - chat.color
+    - chat.format
+    - chat.shout
+    - chat.question
+    - ignore
+    - info
+    - spawn
+    - signs.use.warp
+    - realname
+    - balance - balance.others
+    - balancetop
+    options:
+      prefix: '&f[[&bPlayer&f]] &r'
+      default: true
+  VIP:
+    inheritance:
+    - Guest
+    - Member
+    build: false
+    permissions:
+    - essentials.help
+    - essentials.rules
+    - essentials.motd
+    - watch.use
+    - clickwarp.teleport.instant
+    - clickwarp.warp.instant
+    - clickwarp.sign.use
+    - clickwarp.warp
+    - clickwarp.invwarp.item
+    - chatex.allowchat
+    - modifyworld.chat
+    - easywarp.command.warp
+    - easywarp.sign.use
+    - essentials.signs.use.warp
+    - signwarp.signs.use.warp
+    - essentials.warp.*
+    - essentials.warp
+    - easywarp.warp.<warpname>
+    options:
+      prefix: '&6[&eVIP&6]&7 '
+      default: false
+  Helper:
+    inheritance:
+    - VIP
+    - Guest
+    build: false
+    permissions:
+    - watch.use
+    - clickwarp.teleport.instant
+    - clickwarp.warp.instant
+    - clickwarp.sign.use
+    - clickwarp.warp
+    - clickwarp.invwarp.item
+    - chatex.allowchat
+    - modifyworld.chat
+    - easywarp.command.warp
+    - easywarp.sign.use
+    - essentials.signs.use.warp
+    - signwarp.signs.use.warp
+    - essentials.warp.*
+    - essentials.warp
+    - easywarp.warp.<warpname>
+    - fly.use
+    - ban.use
+    options:
+      prefix: ‘&a&l<<&e&lHelper&a&l>>&f '
+      default: false
+  Admin:
+    inheritance:
+    - VIP
+    - Helper
+    - Guest
+    build: true
+    permissions:
+    - essentials.gamemode
+    - essentials.give
+    - essentials.god
+    options:
+      prefix: '&9&l<&c&lAdmin&9&l> &r'
+      default: false
+  Owner:
+    build: true
+    permissions:
+    - '*'
+    options:
+      prefix: '&a&l<<&6&lOWNER&a&l>> &r'
+      default: false
+    worlds:
+      '&r':
+        options:
+          prefix: '&a&l<<&6&LOWNER&a&l>> '
+  Developer:
+    build: true
+    permissions:
+    - '*'
+    options:
+      prefix: '&a&l[&d&LDeveloper&a&l] &r'
+      default: false
+  user:
+    worlds:
+      Developer:
+        permissions:
+        - Afghan007
+  HeadAdmin:
+    options:
+      prefix: '&a&l<<&9&lHeadAdmin&a&l>>&r'
+    worlds:
+      '&r':
+        options:
+          prefix: '&a&l<<&9&lHeadAdmin&a&l>>'
+  Mod:
+    options:
+      prefix: '&a&l<<&c&lMod&a&l>>&r'
+    worlds:
+      '&r':
+        options:
+          prefix: '&a&l<<&c&lMod&a&l>>'
+users:
+  
+schema-version: 1
